@@ -1,0 +1,32 @@
+.page {
+  padding: 020px;
+  box-sizing: border-box;
+  margin: 0 auto;
+}
+
+&__section-heading {
+  font-size: 24px;
+  line-height: 1.33;
+  font-weight: bold;
+  padding: 30px 0 10px;
+  box-sizing: border-box;
+}
+
+&__header {
+  font-size: 24px;
+  line-height: 1.33;
+  color: hotpink;
+  font-weight: 300;
+  padding: 30px 0 10px;
+  box-sizing: border-box;
+}
+
+&__sub-header {
+  font-size: 16px;
+  line-height: 1.38;
+  font-weight:700;
+  color: lightcoral;
+  padding: 0 0 15px;
+  box-sizing: border-box;
+  width:100%;
+}

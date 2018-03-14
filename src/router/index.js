@@ -4,6 +4,7 @@ import Router from 'vue-router'
 const HomePage = () => import('@/pages/HomePage')
 const YourDetails = () => import('@/pages/YourDetailsPage')
 const Interests = () => import('@/pages/Interests')
+const Movies = () => import('@/pages/MoviePage')
 
 Vue.use(Router)
 
@@ -29,6 +30,12 @@ export default new Router({
       path: '/my-vue-app/interests',
       name: 'Interests',
       component: Interests,
+      step: true
+    },
+    {
+      path: '/my-vue-app/movies',
+      name: 'Movies',
+      component: Movies,
       step: true
     }
   ],

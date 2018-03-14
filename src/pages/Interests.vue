@@ -1,20 +1,23 @@
-<template>
-  <div id="page">
-    <h1>{{ msg }}</h1>
-    <h2>Please fill in the form</h2>
-    <label> Name:</label>
-    <input type="text" v-model="name"/>
-    <span> {{name}} </span>
+<<template>
+  <div>
+    <app-header></app-header>
+    <h1> Please let us know what fils you are interested in... </h1>
+    <app-footer> </app-footer>
   </div>
 </template>
 
 <script>
-/* eslint-disable indent */
+  import Header from '@/components/Header.vue'
+  import Footer from '@/components/Footer.vue'
+
+
   export default {
-    name: 'HelloWorld',
+    components: {
+      'app-header': Header,
+      'app-footer': Footer,
+    },
     data () {
       return {
-        msg: 'Interests'
       }
     }
   }
@@ -22,19 +25,8 @@
 
 <!-- Add "scoped" attribute to limit CSS to this component only -->
 <style scoped>
-  h1, h2 {
-    font-weight: normal;
-    color: black;
+  h1 {
+    font-size: 20px;
   }
-  ul {
-    list-style-type: none;
-    padding: 0;
-  }
-  li {
-    display: inline-block;
-    margin: 0 10px;
-  }
-  a {
-    color: #42b983;
-  }
+
 </style>

@@ -3,3 +3,7 @@
 /dist/
 /*.js
 /test/unit/coverage/
+/components/Footer.vue/
+/components/Header.vue/
+/components/Movies.vue/
+/components/TextQuestion.vue/

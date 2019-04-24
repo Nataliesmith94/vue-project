@@ -1,0 +1,45 @@
+.input {
+  appearance: none;
+  box-sizing: border-box;
+  margin-bottom: 15px;
+  padding: 16px 15px 17px;
+  font-size: 16px;
+  border-radius: 6px;
+  box-shadow: inset 0 2px 0 0 #c6cacc;
+  background-color: #ebf0f2;
+  display: inline-block;
+  color: #566266;
+  width: 100%;
+  -webkit-tap-highlight-color: rgba(0, 0, 0, 0);
+
+  &:focus {
+    box-shadow: 0 0 3px 2px #00aeef, inset 0 2px 0 0 #c6cacc;
+  }
+
+  &--error {
+    box-shadow: 0 0 3px 2px #ed1c24;
+    border-top: 0;
+    background: #fbd2d3;
+    color: #c81c24;
+
+    &:focus {
+      box-shadow: 0 0 3px 2px #ed1c24;
+    }
+
+    &::placeholder {
+      color: #c81c24;
+    }
+  }
+
+  &--uppercase {
+    text-transform: uppercase;
+
+    &::placeholder {
+      text-transform: none;
+    }
+  }
+
+  &:last-child {
+    margin-bottom: 0;
+  }
+}

@@ -14,22 +14,24 @@
 
 <script>
 /* eslint-disable indent */
-  export default {
-    data() {
-      return {
-        title: 'my first vue application'
-      }
-    }
-  }
+export default {
+   data () {
+     return {
+      title: 'My First Vue Application'
+     }
+   }
+}
 </script>
 
 <style>
-
  header{
    background: lightskyblue;
-   padding: 5px 5px 0px 5px;
-   border-bottom: black;
+   padding-top: 5px;
+ }
 
+ header h1 {
+   color: slategrey;
+   text-align: center;
  }
 
  #navbar {
@@ -37,25 +39,23 @@
    height: 8px;
    font-family: Avenir;
    font-size: 20px;
+   margin-bottom: 2em;
 
  }
- ul {
+ #navbar ul {
    list-style-type: none;
    margin: 0;
    padding: 0;
    overflow: hidden;
    background-color: lightskyblue;
    text-align: center;
+   border-top: 5px solid black;
+   border-bottom: 5px solid black;
  }
 
- li {
+ #navbar li {
    display: inline-block;
    text-align: center;
    padding: 15px 30px 15px 30px;
  }
-
-  h1 {
-    color: slategrey;
-    text-align: center;
-  }
 </style>

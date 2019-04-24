@@ -1,4 +1,4 @@
-<template>
+yarn r<template>
 <footer>
   <p> {{copyright}} </p>
 </footer>
@@ -6,7 +6,7 @@
 
 <script>
 export default {
-  data() {
+  data () {
     return {
       copyright: 'copyright 2018'
     }
@@ -19,10 +19,11 @@ export default {
   footer {
     background: #222;
     padding: 6px;
+    margin-top: 2em;
   }
 
   p {
-    color: lightgreen;
+    color: lightskyblue;
     text-align: center;
   }
 </style>

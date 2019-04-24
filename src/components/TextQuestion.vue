@@ -1,46 +1,75 @@
 <template>
-<li class = "rowQuestion">
-  <div v-if="label" class="column">
-
-  </div>
-  <p>
-    <input type="text" v-model="firstName" placeholder="enter Name"/>
-  </p>
-</li>
+<question
+  :label="label"
+  :name="name"
+  :errorMessage="errorMessage" >
+  <input
+    :maxlength="maxLength"
+    type="text"
+    :id="name"
+    :name="name"
+    :value="value"
+    :placeholder="placeholder"
+    class="input"/>
+</question>
 </template>
 
 <script>
-  export default {
-    components: {
+import Question from '@/components/Question.vue'
+
+export default {
+  name: 'TextQuestion',
+
+  components: {
+    question: Question
+  },
+
+  props: {
+    name: {
+      type: String,
+      required: true
     },
-    data () {
-      return {
-      }
+    label: {
+      type: String,
+      default: ''
+    },
+    placeholder: {
+      type: String,
+      default: ''
+    },
+    value: {
+      type: String,
+      default: ''
+    },
+    errorMessage: {
+      type: String,
+      default: ''
+    },
+    maxLength: {
+      type: Number,
+      default: 50
+    },
+    mask: {
+      type: String,
+      default: ''
     }
   }
+}
 </script>
 
-<style>
-  input[type="text"] {
-    padding: 16px 10px 17px;
-    font-weight: 600;
-    font-size: 16px;
-    line-height: 1;
-    border-radius: 5px;
-    box-shadow: rgb(198, 202, 204) 0px 2px 0px 0px inset;
+<style scoped>
+  .input {
+    appearance: none;
     box-sizing: border-box;
-    background-color: rgb(235, 240, 242);
-    display: block;
-    color: rgb(43, 49, 51);
-    width: 100%;
-    height: 50px;
-    transition: all 0.2s ease-in-out;
-    margin-bottom: 10px;
+    margin-bottom: 15px;
+    padding: 16px 15px 17px;
+    font-size: 16px;
+    border-radius: 6px;
+    box-shadow: inset 0 2px 0 0 #c6cacc;
+    background-color: #ebf0f2;
+    display: inline-block;
+    color: #566266;
+    -webkit-tap-highlight-color: rgba(0, 0, 0, 0);
+    width: 350px;
   }
-
-
-  .error-input input:placeholder-shown {
-    color: rgb(200, 28, 36);
-  }
-
 </style>

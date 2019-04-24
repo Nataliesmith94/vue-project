@@ -1,7 +1,7 @@
 <template>
   <div id="movies">
     <ul>
-      <li v-for= "movie in Movies" v-on:click = "movie.show = !movie.show">
+      <li v-for="movie in Movies" :key="movie.id" v-on:click="movie.show = !movie.show" >
       <h2> {{movie.film}}</h2>
         <h3 v-show="movie.show">{{ movie.Genres }} </h3>
       </li>
@@ -11,19 +11,18 @@
 
 <script>
 export default {
-  data() {
+  data () {
     return {
       Movies: [
-        {film: 'Harry Potter', Genres: 'Fiction', show: false},
-        {film: 'Jaws', Genres: 'Horror', show: false},
-        {film: 'Frozen', Genres: 'Animation', show: false},
-        {film: 'The Note Book', Genres: 'Romance', show: false},
-        {film: 'Fast and the Furious', Genres: 'Action', show: false},
+        {film: 'Fiction', Genres: 'Harry Potter', show: false},
+        {film: 'Horror', Genres: 'Jaws', show: false},
+        {film: 'Animation', Genres: 'Frozen', show: false},
+        {film: 'Romance', Genres: 'The Note Book', show: false},
+        {film: 'Action', Genres: 'Fast and the Furious', show: false}
       ]
-
-      }
     }
   }
+}
 </script>
 
 <style scoped>
@@ -40,13 +39,13 @@ ul {
   list-style-type: none;
   padding: 0;
 }
-  li {
-    flex-grow: 1;
-    flex-basis: 300px;
-    text-align: center;
-    padding: 30px;
-    border: 1px solid #222;
-    margin: 10px;
+li {
+  flex-grow: 1;
+  flex-basis: 300px;
+  text-align: center;
+  padding: 30px;
+  border: 1px solid #222;
+  margin: 10px;
 
   }
 </style>
